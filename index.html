@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adhiparasakthi Engineering College</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* LOGIN */
+#login {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.box {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #c00000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* HOME */
+#home {
+    display: none;
+    text-align: center;
+}
+
+header {
+    background: #c00000;
+    color: white;
+    padding: 20px;
+}
+
+.card {
+    width: 60%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    width: 140px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="login">
+
+    <div class="box">
+
+        <img src="logo.png" alt="College Logo">
+
+        <h2>Adhiparasakthi Engineering College</h2>
+        <p>Melmaruvathur</p>
+
+        <input type="text" id="user" placeholder="Username">
+        <input type="password" id="pass" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="msg"></p>
+
+    </div>
+
+</div>
+
+<!-- HOME PAGE -->
+<div id="home">
+
+<header>
+    <h1>Welcome to College Portal</h1>
+    <p>Adhiparasakthi Engineering College, Melmaruvathur</p>
+</header>
+
+<img src="logo.png">
+
+<div class="card">
+    <h2>Student Dashboard</h2>
+    <p>✔ Attendance</p>
+    <p>✔ Results</p>
+    <p>✔ Department Info</p>
+</div>
+
+</div>
+
+<script>
+function login() {
+    let u = document.getElementById("user").value;
+    let p = document.getElementById("pass").value;
+
+    if(u === "admin" && p === "1234") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("home").style.display = "block";
+    } else {
+        document.getElementById("msg").innerText = "Invalid login!";
+    }
+}
+</script>
+
+</body>
+</html>  
